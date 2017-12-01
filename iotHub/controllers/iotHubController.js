@@ -11,9 +11,18 @@ exports.connect_device = function (req, res) {
         console.log("Connection Denied for Invalid Device Id");
     } else {
         console.log('Connection From Device: ' + req.body.deviceId);
-        res.json({ "internalId": activeDevices.length });
+        res.json({
+            "internalId": activeDevices.length
+        });
         activeDevices.push(req.body.typeId);
         console.log("Active Devices: " + activeDevices.length);
     }
 
 };
+
+exports.connect_test = function (req, res) {
+
+    res.json({
+        "itemA": "Frig OFF"
+    })
+}

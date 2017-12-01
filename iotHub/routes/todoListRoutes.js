@@ -16,4 +16,5 @@ module.exports = function (app) {
 
     app.route('/connect')
         .post(iotHub.connect_device)
+        .get(iotHub.connect_test)
 };
